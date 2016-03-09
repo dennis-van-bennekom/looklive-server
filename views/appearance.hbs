@@ -1,38 +1,38 @@
 <div class="appearance" data-id="{{ item.id }}">
-    <div class="appearance-left">
+    <div class="appearance__left">
         <img src="{{ item.image.url }}">
         {{#each item.product_occurrences}}
             <div class="product-indicator" style="top: {{position.y}}%; left: {{position.x}}%;" data-uuid="{{product.id}}"></div>
         {{/each}}
     </div>
-    <div class="appearance-right">
-        <h2><img class="avatar" src="{{ item.subject.avatar.url }}"> {{ item.subject.name }}</h2>
+    <div class="appearance__right">
+        <h2 class="appearance__name"><img class="avatar" src="{{ item.subject.avatar.url }}"> {{ item.subject.name }}</h2>
         <h1>{{ item.title }}</h1>
 
-        <div class="appearance-products">
-            <h1>Products</h1>
-            <div class="appearance-products-inner">
+        <div class="appearance__products">
+            <h1 class="appearance__title">Products</h1>
+            <div class="appearance__products-inner">
                 {{#each products}}
                     <div class="product" data-uuid="{{id}}">
-                        <div class="actual">
-                            <div class="image">
-                                <h1>Actual</h1>
-                                <img src="{{image.url}}">
+                        <div class="product__actual">
+                            <div class="product__header">
+                                <h1 class="product__title">Actual</h1>
+                                <img class="product__image" src="{{image.url}}">
                             </div>
-                            <div class="info">
-                                <h1>{{ name }}</h1>
-                                <h2>{{ brand.name }}</h2>
+                            <div class="product__info">
+                                <h1 class="product__name">{{ name }}</h1>
+                                <h2 class="product__brand">{{ brand.name }}</h2>
                             </div>
                         </div>
                         {{#each similars}}
-                            <div class="similar">
-                                <div class="image">
-                                    <h1>{{ similar_type }}</h1>
-                                    <img src="{{image.url}}">
+                            <div class="product__similar">
+                                <div class="product__header">
+                                    <h1 class="product__title">{{ similar_type }}</h1>
+                                    <img class="product__image" src="{{image.url}}">
                                 </div>
-                                <div class="info">
-                                    <h1>{{ name }}</h1>
-                                    <h2>{{ brand.name }}</h2>
+                                <div class="product__info">
+                                    <h1 class="product__name">{{ name }}</h1>
+                                    <h2 class="product__brand">{{ brand.name }}</h2>
                                 </div>
                             </div>
                         {{/each}}

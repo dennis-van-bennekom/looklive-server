@@ -4,28 +4,35 @@
         <title>{{title}}</title>
         <link rel='stylesheet' href='/styles/style.css' />
         <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,700,800,900,600,300,200,100' rel='stylesheet' type='text/css'>
-        <script src="/js/jquery.js"></script>
-        <script src="/js/app.js"></script>
     </head>
     <body>
-        <div class="nav">
-            <div class="nav-inner">
-                <div class="logo"><img src="/images/logo.png"></div>
-                <ul class="nav-items">
-                    <li><a href="/"><img src="/icons/png/home.png">Home</a></li>
-                    <li><a href="https://looklive.com/discover/"><img src="/icons/png/latest.png">Latest</a></li>
-                    <li><a href="https://looklive.com/people/"><img src="/icons/png/people.png">People</a></li>
-                    <li><a href="https://looklive.com/shows/"><img src="/icons/png/shows.png">Shows</a></li>
-                    <li><a href="https://looklive.com/music/"><img src="/icons/png/music.png">Music</a></li>
-                    <li><a href="https://looklive.com/brands/"><img src="/icons/png/brands.png">Brands</a></li>
+        <nav class="navigation">
+            <div class="navigation__inner">
+                <div class="navigation__logo">
+                    <img class="navigation__logo-image" src="/images/logo.png" alt="LookLive logo" />
+                </div>
+
+                <ul class="navigation__items">
+                    <li class="navigation__item"><a href="/" class="navigation__link"></a></li>
+                    <li class="navigation__item"><a href="https://looklive.com/discover/" class="navigation__link"><img class="navigation__image" src="/icons/png/latest.png">Latest</a></li>
+                    <li class="navigation__item"><a href="https://looklive.com/people/" class="navigation__link"><img class="navigation__image" src="/icons/png/people.png">People</a></a></li>
+                    <li class="navigation__item"><a href="https://looklive.com/shows/" class="navigation__link"><img class="navigation__image" src="/icons/png/shows.png">Shows</a></a></li>
+                    <li class="navigation__item"><a href="https://looklive.com/music/" class="navigation__link"><img class="navigation__image" src="/icons/png/music.png">Music</a></a></li>
+                    <li class="navigation__item"><a href="https://looklive.com/brands/" class="navigation__link"><img class="navigation__image" src="/icons/png/brands.png">Brands</a></li>
                 </ul>
-                <div class="clear"></div>
             </div>
-        </div>
-        <div class="header"><img src="/images/header.png"></div>
+        </nav>
+
+        <header class="header">
+            <img src="/images/header-small.jpg"
+                 srcset="/images/header-small.jpg 480w, /images/header-medium.jpg 960w, /images/header-large.jpg 1920w"
+                 alt="House of Cards">
+        </header>
 
         <div class="inner-wrapper">
             {{{body}}}
         </div>
+
+        <script src="/js/app.js"></script>
     </body>
 </html>
