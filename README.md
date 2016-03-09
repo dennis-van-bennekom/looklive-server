@@ -2,7 +2,7 @@
 
 ## Screenshots
 **Voor**:
-![**voor**](voor.png),
+![**voor**](voor.png)
 **Na**:
 ![**na**](na.png)
 
