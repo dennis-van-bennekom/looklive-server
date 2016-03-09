@@ -1,14 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="601px" height="500px" viewBox="0 0 601 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.0.4 (8054) - http://www.bohemiancoding.com/sketch -->
-    <title>shows</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="shows" sketch:type="MSLayerGroup" transform="translate(1.000000, 0.000000)" fill="#000000">
-            <circle id="Oval-3" sketch:type="MSShapeGroup" cx="483.190757" cy="112.5" r="37.5"></circle>
-            <path d="M-0.425589806,49.9503306 L-0.425589806,375.049669 C-0.425589806,402.636475 21.954952,425 49.5696965,425 L549.579124,425 C577.190758,425 599.57441,402.636877 599.57441,375.049669 L599.57441,49.9503306 C599.57441,22.3635248 577.193868,0 549.579124,0 L49.5696965,0 C21.9580623,0 -0.425589806,22.3631233 -0.425589806,49.9503306 Z M549.579124,49.960032 C549.579194,49.960032 549.57441,375.049669 549.57441,375.049669 C549.57441,375.043395 49.5696965,375.039968 49.5696965,375.039968 C49.5696263,375.039968 49.5744102,49.9503306 49.5744102,49.9503306 C49.5744102,49.9566054 549.579124,49.960032 549.579124,49.960032 Z" id="Rectangle-2" sketch:type="MSShapeGroup"></path>
-            <path d="M249.57441,461.297803 L249.57441,400 L374.57441,400 L374.57441,455.944497 C441.995007,469.195856 524.57441,500 524.57441,500 L124.57441,500 C124.57441,500 188.113489,476.04599 249.57441,461.297803 L249.57441,461.297803 Z" id="Rectangle-3" sketch:type="MSShapeGroup"></path>
-        </g>
-    </g>
-</svg>
+<svg width="601" height="500" viewBox="0 0 601 500" xmlns="http://www.w3.org/2000/svg"><title>shows</title><g transform="translate(1)" fill="#000" fill-rule="evenodd"><circle cx="483.191" cy="112.5" r="37.5"/><path d="M-.426 49.95v325.1c0 27.586 22.38 49.95 49.996 49.95h500.01c27.61 0 49.994-22.363 49.994-49.95V49.95c0-27.586-22.38-49.95-49.995-49.95H49.57C21.958 0-.426 22.363-.426 49.95zm550.005.01l-.006 325.09c0-.007-500.004-.01-500.004-.01l.004-325.09c0 .007 500.005.01 500.005.01z"/><path d="M249.574 461.298V400h125v55.944c67.42 13.252 150 44.056 150 44.056h-400s63.54-23.954 125-38.702z"/></g></svg>

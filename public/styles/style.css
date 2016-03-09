@@ -58,9 +58,11 @@ a {
 
 .navigation__image {
     height: 1em;
+    width: 1em;
     position: relative;
     margin-right: .3em;
-    top: 6px;
+    top: 3px;
+    fill: #fff;
 }
 
 .header {
