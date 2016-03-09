@@ -3,6 +3,8 @@ var router = express.Router();
 var fs = require('fs');
 
 router.get('/', function(req, res, next) {
+    console.log('GET home');
+
     fs.readFile('resources/feed.json', 'utf8', function(err, data) {
         if(err) {
             res.status(404);
