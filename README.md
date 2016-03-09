@@ -1,7 +1,10 @@
 # LookLive
 
 ## Screenshots
-![**voor**](voor.png), ![**na**](na.png)
+**Voor**:
+![**voor**](voor.png),
+**Na**:
+![**na**](na.png)
 
 ## Verbeteringen
 - Header image responsive en een stuk kleiner gemaakt.
