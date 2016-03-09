@@ -7,10 +7,10 @@
 
 ## Screenshots
 **Voor**:
-![voor](/screenshots/voor.png)
+![voor](screenshots/voor.png)
 
 **Na**:
-![na](/screenshots/na.png)
+![na](screenshots/na.png)
 
 ***
 
@@ -19,7 +19,17 @@
 
 ## Screenshots
 **Voor**:
-![na](/screenshots/na.png)
+![na](screenshots/na.png)
 
 **Na**:
-![voor](/screenshots/na-svg.png)
+![voor](screenshots/na-svg.png)
+
+# Verbeteringen
+- One page app gemaakt mbv fetch.
+
+## Screenshots
+**Voor**:
+![na](screenshots/na-svg.png)
+
+**Na**:
+![voor](screenshots/na-webapp.png)
