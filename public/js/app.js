@@ -41,6 +41,10 @@
             });
     }
 
+    function feed() {
+        var blazy = new Blazy();
+    }
+
     function appearance() {
         // Appearance page
         var products = document.querySelectorAll('.product');
@@ -74,6 +78,10 @@
 
     function ready() {
         init();
+
+        if (window.location.pathname === '/') {
+            feed();
+        }
 
         // Credit: Robert van Steen
         if (/appearance/.test(window.location.href)) {
