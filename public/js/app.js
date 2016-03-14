@@ -1,95 +1,125 @@
 /*
- * jQuery specifieke code omgezet naar vanilla javascript zodat de jQuery
- * library niet in hoeft geladen te worden. Dit scheelt een stuk in laadtijd.
+* jQuery specifieke code omgezet naar vanilla javascript zodat de jQuery
+* library niet in hoeft geladen te worden. Dit scheelt een stuk in laadtijd.
 **/
 (function() {
-    function init() {
-        var links = document.querySelectorAll('a[data-url]');
+  function init() {
+    var timer;
+    var links = document.querySelectorAll('a[data-url]');
 
-        [].forEach.call(links, function(link) {
-            link.addEventListener('click', function(event) {
-                event.preventDefault();
+    [].forEach.call(links, function(link) {
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
 
-                var url = event.currentTarget.getAttribute('data-url');
-                var href = event.currentTarget.href;
+        var url = event.currentTarget.getAttribute('data-url');
+        var href = event.currentTarget.href;
 
-                history.pushState(null, null, href);
+        history.pushState(null, null, href);
 
-                loadPage(url);
-            });
-        });
+        loadPage(url);
+      });
 
-        window.addEventListener('popstate', function(event) {
-            var url = '/api' + window.location.pathname;
+      link.addEventListener('mouseenter', function(event) {
+        var url = event.currentTarget.getAttribute('data-url');
 
-            if (url === '/api/') {
-                url = '/api/feed';
-            }
+        timer = setTimeout(() => {
+            preload(url);
+        }, 150);
+      });
 
-            loadPage(url)
-        });
+      link.addEventListener('mouseleave', function(event) {
+        if (timer)
+          clearTimeout(timer);
+      });
+    });
+
+    window.addEventListener('popstate', function(event) {
+      var url = '/api' + window.location.pathname;
+
+      if (url === '/api/') {
+        url = '/api/feed';
+      }
+
+      loadPage(url)
+    });
+
+    // Service Worker code
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js', { scope: './' })
+        .then(reg => console.info('registered sw', reg))
+        .catch(err => console.error('error registering', err));
     }
+  }
 
-    function loadPage(url, href) {
-        var wrapper = document.querySelector('.inner-wrapper');
-
-        fetch(url)
-            .then(response => response.text())
-            .then(text => {
-                wrapper.innerHTML = text;
-                ready();
-            });
+  function preload(url) {
+    if (navigator.serviceWorker.controller) {
+      navigator.serviceWorker.controller.postMessage({
+        type: 'preload',
+        content: url
+      });
     }
+  }
 
-    function feed() {
-        // var blazy = new Blazy();
-    }
+  function loadPage(url, href) {
+    var wrapper = document.querySelector('.inner-wrapper');
 
-    function appearance() {
-        // Appearance page
-        var products = document.querySelectorAll('.product');
-
-        products[0].classList.add('product-active');
-
-        var firstIndicator = document.querySelector('.product-indicator[data-uuid="' + products[0].dataset.uuid + '"]');
-
-        firstIndicator.classList.add('product-indicator-active');
-
-        var indicators = document.querySelectorAll('.product-indicator');
-
-        [].forEach.call(indicators, function(indicator) {
-            indicator.addEventListener('click', function(event) {
-                var id = event.target.dataset.uuid;
-
-                var currentIndicatorActive = document.querySelector('.product-indicator-active');
-                currentIndicatorActive.classList.remove('product-indicator-active');
-
-                var newIndicatorActive = event.target;
-                newIndicatorActive.classList.add('product-indicator-active');
-
-                var currentActive = document.querySelector('.product-active');
-                currentActive.classList.remove('product-active');
-
-                var newActive = document.querySelector('.product[data-uuid="' + id + '"]');
-                newActive.classList.add('product-active');
-            });
-        });
-    }
-
-    function ready() {
-        init();
-
-        if (window.location.pathname === '/') {
-            feed();
-        }
-
-        // Credit: Robert van Steen
-        if (/appearance/.test(window.location.href)) {
-            appearance();
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
+    fetch(url)
+      .then(response => response.text())
+      .then(text => {
+        wrapper.innerHTML = text;
         ready();
-    }, false);
+      });
+  }
+
+  function feed() {
+    // var blazy = new Blazy();
+  }
+
+  function appearance() {
+    // Appearance page
+    var products = document.querySelectorAll('.product');
+
+    products[0].classList.add('product-active');
+
+    var firstIndicator = document.querySelector('.product-indicator[data-uuid="' + products[0].dataset.uuid + '"]');
+
+    firstIndicator.classList.add('product-indicator-active');
+
+    var indicators = document.querySelectorAll('.product-indicator');
+
+    [].forEach.call(indicators, function(indicator) {
+      indicator.addEventListener('click', function(event) {
+        var id = event.target.dataset.uuid;
+
+        var currentIndicatorActive = document.querySelector('.product-indicator-active');
+        currentIndicatorActive.classList.remove('product-indicator-active');
+
+        var newIndicatorActive = event.target;
+        newIndicatorActive.classList.add('product-indicator-active');
+
+        var currentActive = document.querySelector('.product-active');
+        currentActive.classList.remove('product-active');
+
+        var newActive = document.querySelector('.product[data-uuid="' + id + '"]');
+        newActive.classList.add('product-active');
+      });
+    });
+  }
+
+  function ready() {
+    init();
+
+    if (window.location.pathname === '/') {
+      feed();
+    }
+
+    // Credit: Robert van Steen
+    if (/appearance/.test(window.location.href)) {
+      appearance();
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    ready();
+  }, false);
 }());
