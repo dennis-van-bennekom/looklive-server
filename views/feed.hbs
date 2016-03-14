@@ -1,9 +1,9 @@
 <div class="feed">
     {{#each items}}
         <section class="feed__item" data-uuid="{{id}}">
-            <img class="b-lazy feed__image" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="{{ image.url }}">
+            <img class="feed__image" src="{{ image.url }}">
             <h2 class="feed__subject">
-                <img class="b-lazy feed__avatar" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="{{ subject.avatar.url }}">
+                <img class="feed__avatar" src="{{ subject.avatar.url }}">
                 {{ subject.name }}
             </h2>
             <h1 class="feed__title">

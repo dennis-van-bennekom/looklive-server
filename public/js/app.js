@@ -42,7 +42,7 @@
     }
 
     function feed() {
-        var blazy = new Blazy();
+        // var blazy = new Blazy();
     }
 
     function appearance() {
