@@ -31,17 +31,27 @@ https://developers.google.com/web/progressive-web-apps?hl=en
 
 ## Screenshots
 **Voor**:
-![na](screenshots/na.png)
+![voor](screenshots/na.png)
 
 **Na**:
-![voor](screenshots/na-svg.png)
+![na](screenshots/na-svg.png)
 
 # Verbeteringen
 - One page app gemaakt mbv fetch.
 
 ## Screenshots
 **Voor**:
-![na](screenshots/na-svg.png)
+![voor](screenshots/na-svg.png)
 
 **Na**:
+![na](screenshots/na-webapp.png)
+
+# Verbeteringen
+- Service worker die de pagina alvast ophaalt bij een mouseover.
+
+## Screenshots
+**Voor**:
 ![voor](screenshots/na-webapp.png)
+
+**Na**:
+![na](screenshots/na-service-worker.png)
