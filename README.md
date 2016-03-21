@@ -1,5 +1,8 @@
 # LookLive
 
+## Digital Ocean link
+https://performance.dennisvanbennekom.com/
+
 ## Progressive Web App
 Google beschrijft eigenlijk heel goed wat een progressive web app is. Belangrijk is dat het als een app moet voelen, maar alsnog op elk apparaat werkt dat op het web kan. Vooral moeten ze progressive zijn. Web browsers die niet goed gesupport zijn moeten een basis versie kunnen krijgen. 
 
