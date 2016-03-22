@@ -125,7 +125,7 @@ body {
 }
 ```
 
-Standaard laad ik dus gewoon Helvetica etc. in, maar zodra de fonts geladen zijn kan ik Raleway gebruiken.
+Standaard laad ik dus gewoon Helvetica etc. in, maar zodra de fonts geladen zijn kan ik Raleway gebruiken. Hierdoor heb je nooit last van de FOUT. :)
 
 ## Screenshots
 
