@@ -99,3 +99,30 @@ gulp.task('build', function() {
 
 gulp.task('default', ['build']);
 ```
+
+## Optimaliseer web font
+
+Voor het optimaliseren van de web font heb ik [Web Font Loader](https://github.com/typekit/webfontloader) gebruikt. Hiermee is het mogelijk om web fonts async in te laden en wordt een class toegevoegd aan het html element zodra het font geladen is.
+
+```js
+WebFont.load({
+  google: {
+    families: ['Raleway:latin'] // Subsetting
+  }
+});
+```
+
+```css
+body {
+    font: 14px Helvetica, Arial, sans-serif;
+    background-color: #f1f1f1;
+    margin: 0;
+}
+
+/* Use the google font when it is available */
+.wf-active body {
+  font: 14px Raleway, Helvetica, Arial, sans-serif;
+}
+```
+
+Standaard laad ik dus gewoon Helvetica etc. in, maar zodra de fonts geladen zijn kan ik Raleway gebruiken.
