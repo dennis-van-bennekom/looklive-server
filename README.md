@@ -1,35 +1,15 @@
 # LookLive
 
-## Verbeteringen
-- Header image responsive en een stuk kleiner gemaakt.
-- jQuery code omgezet naar vanilla js.
-- CSS omgezet naar BEM voor snellere selector performance.
+## Taskmanagers
 
-## Screenshots
-**Voor**:
-![voor](screenshots/voor.png)
+Taskmanagers zijn handige tools om je build proces te automatiseren. Er zijn een aardig wat verschillende build tools zoals:
+- [gulp](http://gulpjs.com/)
+- [grunt](http://gruntjs.com/)
+- [webpack](https://webpack.github.io/)
+- [npm](https://docs.npmjs.com/misc/scripts)
 
-**Na**:
-![na](screenshots/na.png)
+Zelf gebruik ik graag gulp voor front-end projecten of webpack als het een react of ander javascript gebaseerd project is. Soms is het ook handig om npm scripts te gebruiken als het maar hele kleine dingen zijn die je hoeft te automatiseren. Het voordeel hiervan is dat je niet speciale build tools hoeft te installeren, maar gewoon je package.json kan gebruiken.
 
-***
+De reden dat ik gulp zou kiezen in plaats van grunt is dat het veel minder configuratie is. Gulp is veel logischer voor mijn gevoel, omdat het een soort pipeline is waar je bestanden doorheen gestuurd worden en waar je ondertussen bewerkingen op doet. [bron](https://medium.com/@preslavrachev/gulp-vs-grunt-why-one-why-the-other-f5d3b398edc4).
 
-# Verbeteringen
-- Inline SVG gebruikt ipv spritesheet, want dit scheelt een request en maakt het makkelijk om deze icons te stijlen.
-
-## Screenshots
-**Voor**:
-![na](screenshots/na.png)
-
-**Na**:
-![voor](screenshots/na-svg.png)
-
-# Verbeteringen
-- One page app gemaakt mbv fetch.
-
-## Screenshots
-**Voor**:
-![na](screenshots/na-svg.png)
-
-**Na**:
-![voor](screenshots/na-webapp.png)
+Voor dit project kies ik er voor om gulp te gebruiken, omdat ik denk dat de dingen die ik ermee wil doen te veel zijn voor npm scripts, die dan veel minder overzichtelijk worden. Ik kies niet voor webpack omdat ik dat voor een project als dit niet fijn vind werken en ik niet echt gebruik wil maken van `import` dingen.
