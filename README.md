@@ -126,3 +126,11 @@ body {
 ```
 
 Standaard laad ik dus gewoon Helvetica etc. in, maar zodra de fonts geladen zijn kan ik Raleway gebruiken.
+
+## Screenshots
+
+### Voor
+![voor](voor.png)
+
+### Na
+![na](na.png)
