@@ -28,6 +28,12 @@
 
             loadPage(url)
         });
+
+        WebFont.load({
+          google: {
+              families: ['Raleway:latin'] // Subsetting
+          }
+        });
     }
 
     function loadPage(url, href) {
