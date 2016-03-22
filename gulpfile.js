@@ -1,13 +1,13 @@
-var gulp = require('gulp');
+var gulp         = require('gulp');
 var autoprefixer = require('gulp-autoprefixer');
-var cssnano = require('gulp-cssnano');
-var uglify = require('gulp-uglify');
-var imagemin = require('gulp-imagemin');
-var concat = require('gulp-concat');
-var cache = require('gulp-cache');
-var sourcemaps = require('gulp-sourcemaps');
-var browserSync = require('browser-sync').create();
-var shell = require('gulp-shell');
+var browserSync  = require('browser-sync').create();
+var cache        = require('gulp-cache');
+var concat       = require('gulp-concat');
+var cssnano      = require('gulp-cssnano');
+var imagemin     = require('gulp-imagemin');
+var shell        = require('gulp-shell');
+var sourcemaps   = require('gulp-sourcemaps');
+var uglify       = require('gulp-uglify');
 
 gulp.task('styles', function() {
   return gulp.src('src/styles/**/*.css')
