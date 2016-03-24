@@ -220,10 +220,10 @@ Standaard laad ik dus gewoon Helvetica etc. in, maar zodra de fonts geladen zijn
 ## Screenshots
 
 ### Voor
-![voor](voor-font.png)
+![voor](screenshots/voor-font.png)
 
 ### Na
-![na](na-font.png)
+![na](screenshots/na-font.png)
 
 # Conclusie
 
