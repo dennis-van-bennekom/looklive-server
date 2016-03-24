@@ -220,15 +220,16 @@ Standaard laad ik dus gewoon Helvetica etc. in, maar zodra de fonts geladen zijn
 ## Screenshots
 
 ### Voor
-![voor](voor.png)
+![voor](voor-font.png)
 
 ### Na
-![na](na.png)
+![na](na-font.png)
 
 # Conclusie
 
 Doormiddel van alle bovenstaande verbeteringen is de site een stuk beter geoptimaliseerd en is de gebruikerservaring verbeterd.
 
 ### Begin
+![voor](screenshots/voor.png)
 
 ### Eind
