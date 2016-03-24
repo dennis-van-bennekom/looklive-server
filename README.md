@@ -2,6 +2,41 @@
 
 https://performance.dennisvanbennekom.com
 
+## Verbeteringen
+- Header image responsive en een stuk kleiner gemaakt.
+- jQuery code omgezet naar vanilla js.
+- CSS omgezet naar BEM voor snellere selector performance.
+
+### Screenshots
+**Voor**:
+![voor](screenshots/voor.png)
+
+**Na**:
+![na](screenshots/na.png)
+
+***
+
+## Verbeteringen
+- Inline SVG gebruikt ipv spritesheet, want dit scheelt een request en maakt het makkelijk om deze icons te stijlen.
+
+### Screenshots
+**Voor**:
+![na](screenshots/na.png)
+
+**Na**:
+![voor](screenshots/na-svg.png)
+
+## Verbeteringen
+- One page app gemaakt mbv fetch.
+
+### Screenshots
+**Voor**:
+![na](screenshots/na-svg.png)
+
+**Na**:
+![voor](screenshots/na-webapp.png)
+
+
 ## Taskmanagers
 
 Taskmanagers zijn handige tools om je build proces te automatiseren. Er zijn een aardig wat verschillende build tools zoals:
