@@ -233,3 +233,4 @@ Doormiddel van alle bovenstaande verbeteringen is de site een stuk beter geoptim
 ![voor](screenshots/voor.png)
 
 ### Eind
+![na](screenshots/na.png)
